@@ -1,3 +1,7 @@
+party_tribe_directory:
+    resource: "@PartyTribeDirectoryBundle/Resources/config/routing.xml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
