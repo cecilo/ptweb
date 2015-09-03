@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet/less" type="text/css" href="/demo/styles/reset.css">
+<link rel="stylesheet/less" type="text/css" href="/demo/styles/base.css">
+<link rel="stylesheet/less" type="text/css" href="/demo/styles/style.less">
+<link rel="stylesheet" type="text/css" href="/demo/styles/dropkick.css">
+<link rel="stylesheet" type="text/css" href="/demo/bower_components/fullcalendar/dist/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="/demo/bower_components/jquery_als/demo/css/als_demo.css">
+<script type="text/javascript">
+	less = { env: 'development' };
+</script>
+<script src="/demo/js/less.min.js"></script>
+<title></title>
+</head>
+<body>
+
+<div class="container-fill">
+	<header>
+		<nav class="main-menu">
+			<a href="#" class="first">Home</a>
+			<a href="#">Events</a>
+			<a href="#">Archives</a>
+			<a href="#">Contact</a>
+		</nav>
+		<section id="login-container">
+			<a href="#" class="first">Register</a>
+			<a href="#">Sign in</a>
+		</section>
+	</header>
+	<div class="row">
+		<section id="sidebar">
+			<a id="logo">
+				<b>PartyTribe</b>
+			</a>
+			<form id="search-form">
+				
+				<input type="hidden" id="sel-country" name="state" tabindex="1" value="India" />
+				<input type="hidden" id="sel-state" name="state" tabindex="2" value="Goa" />
+				<select id="sel-city" name="city" class="dropkick" tabindex="3">
+					<option>North Goa</option>
+					<option>South Goa</option>
+				</select>
+				<select id="sel-venue" name="venue" class="dropkick" tabindex="4">
+					<option>All venues</option>
+					<option>Titos</option>
+					<option>SinQ</option>
+				</select>
+				<select id="sel-genre" name="genre" class="dropkick" tabindex="5">
+					<option>All genres</option>
+					<option>Hip Hop</option>
+					<option>EDM</option>
+					<option>Latin</option>
+					<option>Rock</option>
+					<option>Pop</option>
+					<option>Retro</option>
+					<option>Bollywood</option>
+				</select>
+				<button id="btn-search" type="submit">Filter ► </button>
+			</form>
+		</section>
+		<section id="featured-events">
+			<img src="/demo/images/featuredevents/1.jpg" />
+		</section>
+		<section id="right-box">
+			<div id="calendar-container">
+				<div id='calendar'></div>
+			</div>
+		</section>
+	</div>
+	<section id="upcoming-events">
+		<h1></h1>
+		<div id="lista1" class="als-container">
+				<span class="als-prev"><img src="/demo/bower_components/jquery_als/demo/images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+				<div class="als-viewport">
+					<ul class="als-wrapper">
+						<li class="als-item"><img src="/demo/assets/upcoming_events/images/1.jpg" alt="alarm clock" title="alarm clock" /><b>alarm clock</b></li>
+						<li class="als-item"><img src="/demo/assets/upcoming_events/images/2.jpg" alt="scissors" title="scissors" /><b>scissors</b></li>
+						<li class="als-item"><img src="/demo/assets/upcoming_events/images/3.jpg" alt="heart" title="heart" /><b>heart</b></li>
+						<li class="als-item"><img src="/demo/assets/upcoming_events/images/4.jpg" alt="pin" title="pin" /><b>pin</b></li>
+						<li class="als-item"><img src="/demo/assets/upcoming_events/images/5.jpg" alt="mobile phone" title="mobile phone" /><b>mobile phone</b></li>
+						<li class="als-item"><img src="/demo/assets/upcoming_events/images/6.jpg" alt="camera" title="camera" /><b>camera</b></li>
+						<li class="als-item"><img src="/demo/assets/upcoming_events/images/7.jpg" alt="music note" title="music note" /><b>music note</b></li>
+						<li class="als-item"><img src="/demo/assets/upcoming_events/images/8.jpg" alt="umbrella" title="umbrella" /><b>umbrella</b></li>
+						<li class="als-item"><img src="/demo/assets/upcoming_events/images/9.jpg" alt="television" title="television" /><b>television</b></li>
+					</ul>
+				</div>
+				<span class="als-next"><img src="/demo/bower_components/jquery_als/demo/images/thin_right_arrow_333.png" alt="next" title="next" /></span>
+			</div>
+	</section>
+	<footer>
+		All rights reserved. PartyTribe 2015
+	</footer>
+</div>
+
+
+<script src="/demo/js/jquery.js"></script>
+<script src="/demo/js/jquery.dropkick-min.js"></script>
+<script src="/demo/bower_components/moment/min/moment-with-locales.min.js"></script>
+<script src="/demo/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+<script src="/demo/bower_components/jquery_als/demo/js/jquery.als-1.7.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(".dropkick").dropkick({
+		startSpeed:400,
+		theme:'black',
+		change:function(value,label){
+			
+		}
+	});
+	
+	$('#calendar').fullCalendar({
+		header: {
+			left: 'prev,next',
+			center: 'title',
+			right: 'month,basicWeek,basicDay'
+		},
+		defaultDate: '2015-02-12',
+		editable: true,
+		eventLimit: true, // allow "more" link when too many events
+		events: [
+			{
+				title: 'All Day Event',
+				start: '2015-02-01'
+			},
+			{
+				title: 'Long Event',
+				start: '2015-02-07',
+				end: '2015-02-10'
+			},
+			{
+				id: 999,
+				title: 'Repeating Event',
+				start: '2015-02-09T16:00:00'
+			},
+			{
+				id: 999,
+				title: 'Repeating Event',
+				start: '2015-02-16T16:00:00'
+			},
+			{
+				title: 'Conference',
+				start: '2015-02-11',
+				end: '2015-02-13'
+			},
+			{
+				title: 'Meeting',
+				start: '2015-02-12T10:30:00',
+				end: '2015-02-12T12:30:00'
+			},
+			{
+				title: 'Lunch',
+				start: '2015-02-12T12:00:00'
+			},
+			{
+				title: 'Meeting',
+				start: '2015-02-12T14:30:00'
+			},
+			{
+				title: 'Happy Hour',
+				start: '2015-02-12T17:30:00'
+			},
+			{
+				title: 'Dinner',
+				start: '2015-02-12T20:00:00'
+			},
+			{
+				title: 'Birthday Party',
+				start: '2015-02-13T07:00:00'
+			},
+			{
+				title: 'Click for Google',
+				url: 'http://google.com/',
+				start: '2015-02-28'
+			}
+		]
+	});
+	
+	$("#lista1").als({
+		visible_items: 7,
+		scrolling_items: 2,
+		orientation: "horizontal",
+		circular: "no",
+		autoscroll: "no",
+		interval: 5000,
+		speed: 500,
+		easing: "linear",
+		direction: "right",
+		start_from: 0
+	});
+	
+});
+</script>
+</body>
+</html>

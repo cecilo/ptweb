@@ -1,0 +1,172 @@
+@border1:2px solid #1c1b1b;
+
+.main-menu(){
+	padding:0px 5px 0px 5px;
+
+	a{
+		text-transform:uppercase;
+		padding:1px 3px 1px 3px;
+		text-decoration: none;
+		color:#fff;
+		border-left:1px solid #333232;
+
+	}
+
+	a.first{
+		border-left:none;
+	}
+}
+
+body{
+	width:100%;
+	background-image:url('../images/bg.jpg');
+	background-size:cover;
+	font-family: 'Muli';
+	.row {
+		display:flex;
+		flex-flow: row;
+		section{
+			display:inline-block;
+		}
+	}
+	position:relative;
+}
+
+
+.container-fill{
+	
+}
+
+header{
+	background-color:#000;
+	background-image:url('../images/blacktex.png');
+	padding:5px;
+	border-bottom:@border1;
+	text-align:left;
+	position:relative;
+	.main-menu{
+		.main-menu;
+		font-family:'Muli';
+		font-size: 0.8em;
+	}
+	
+	#login-container{
+		.main-menu;
+		position:absolute;
+		right:5px;
+		top:5px;
+		font-family:'LeagueGothic';
+		font-size: 1em;
+	}
+	
+}
+
+#sidebar{
+	/* width:15.625%;  300/1920 */
+	height:33vw;
+	display:inline-block;
+	text-align:center;
+	#logo{
+		position:relative;
+		display:inline-block;
+		b{
+			display:none;
+			
+		}
+		width:16vw;
+		height:7.5vw;
+		background-image:url('../images/logo.png');
+		background-size:cover;
+	}
+	#btn-search{
+		border-radius:5px;
+		background-color:#fff;
+		border:1px solid #000;
+		text-align:center;
+		width:90%;
+		padding:7px 0 7px 0;
+	}
+	flex:15;
+}
+
+#featured-events{
+	/*width:34.89583333333333%;  670/1920 */
+	height:33vw;
+	display:inline-block;
+	flex:35;
+	
+	border-left:@border1;
+	border-right:@border1;
+	
+	img{
+		width:100%;
+		height:100%;
+	}
+}
+
+#right-box{
+	flex:50;
+	height:33vw;
+	display:inline-block;
+	position:relative;
+	text-align:center;
+	
+	
+	
+	#calendar{
+		width:70%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:10px;
+		padding:10px;
+		border-radius:10px;
+		background-color:#101010;
+		
+		.fc-bg{
+			background-color:#fff;
+		}
+		
+		h2{
+			color:#fff;
+			margin-top:5px;
+			font-weight:bold;
+			font-size:1.5em;
+		}
+		
+		.fc-head{
+			color:#fff;
+		}
+		
+		.fc-toolbar{
+			font-size:0.7em;
+		}
+		
+		.fc-row{
+			min-height:0.5em !important;
+		}
+
+		
+		
+		.fc-month-view{
+			.fc-event-container{
+				display:none;
+			}
+		}
+	}
+
+}
+
+#upcoming-events{
+	height:16vw;
+	background-color:#2e2d2e;
+	border-top:2px solid #1c1b1b;
+}
+
+footer{
+	height:2.6vw;
+	background-color:#000;
+	text-align:right;
+	padding:6px;
+	color:#fff;
+	background-image:url('../images/blacktex.png');
+}

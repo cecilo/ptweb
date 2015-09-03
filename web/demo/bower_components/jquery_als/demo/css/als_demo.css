@@ -1,0 +1,85 @@
+
+
+
+
+
+
+/********************************
+ * generic als elements styling
+ ********************************/
+.als-container {
+	position: relative;
+	width: 100%;
+	margin: 0px auto;
+}
+
+.als-viewport {
+	position: relative;
+	overflow: hidden;
+	margin: 0px auto;
+}
+
+.als-wrapper {
+	position: relative;
+	list-style: none;
+}
+
+
+.als-item {
+	position: relative;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+
+.als-item img{
+    display: block;
+    width: auto;
+    height:14vw;
+}
+
+.als-item b{
+    display: none;
+}
+
+.als-prev, .als-next {
+	position: absolute;
+	cursor: pointer;
+	clear: both;
+}
+
+
+/**************************
+ * specific als elements
+ * styling for #lista1
+ **************************/
+
+#lista1 {
+	margin: 10px auto 10px auto;
+}
+
+#lista1 .als-item {
+	margin: 0px 3px;
+}
+
+#lista1 .als-item img {
+	position: relative;
+	display: block;
+	vertical-align: middle;
+	margin-bottom: 8px;
+}
+
+#lista1 .als-prev, #lista1 .als-next {
+	top: 58px;
+	width: 15px;
+	height: 22px;
+}
+
+#lista1 .als-prev {
+	left: 90px;
+}
+
+#lista1 .als-next {
+	right: 100px;
+}
