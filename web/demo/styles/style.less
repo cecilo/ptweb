@@ -122,9 +122,17 @@ header{
 		border-radius:10px;
 		background-color:#101010;
 		
+		
 		.fc-bg{
 			background-color:#fff;
+			cursor:pointer;
 		}
+		
+		.fc-bg-active{
+			background-color:#c0c0c0;
+		}
+		
+		
 		
 		h2{
 			color:#fff;
@@ -150,6 +158,17 @@ header{
 		.fc-month-view{
 			.fc-event-container{
 				display:none;
+			}
+			
+			.fc-day-number{
+				cursor:pointer;
+			}
+			
+			
+			.fc-day{
+				&:hover{
+					background-color:#c0c0c0;
+				}
 			}
 		}
 	}

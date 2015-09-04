@@ -192,6 +192,16 @@ $(document).ready(function(){
 		start_from: 0
 	});
 	
+	$("body").on("mouseover",".fc-month-view .fc-day-number",function(){
+		$(".fc-day[data-date="+$(this).attr("data-date")+"]").addClass("fc-bg-active");
+	});
+	
+	$("body").on("mouseout",".fc-month-view .fc-day-number",function(){
+		$(".fc-day[data-date="+$(this).attr("data-date")+"]").removeClass("fc-bg-active");
+	});
+	
+	
+	
 });
 </script>
 </body>

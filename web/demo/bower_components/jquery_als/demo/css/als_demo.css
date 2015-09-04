@@ -72,9 +72,26 @@
 
 #lista1 .als-prev, #lista1 .als-next {
 	top: 58px;
-	width: 15px;
-	height: 22px;
+	width: 40px;
+	height: 40px;
+	background-color:#fff;
+	border-radius:100px;
+	z-index:100;
+	border:5px solid #2c2c2c;
 }
+
+#lista1 .als-prev img
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+
+#lista1 .als-next img{
+	margin-top:10px;
+	margin-left:15px;
+}
+
+
 
 #lista1 .als-prev {
 	left: 90px;
